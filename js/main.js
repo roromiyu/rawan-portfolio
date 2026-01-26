@@ -1,66 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== Page fade-in =====
-  requestAnimationFrame(() => {
-    document.body.classList.add("loaded");
+  // ===== PAGE FADE-IN =====
+  requestAnimationFrame(() => document.body.classList.add("loaded"));
+
+  // ===== START BUTTON & SECTIONS FADE-IN =====
+  const startBtn = document.getElementById("start-btn");
+  const sections = document.querySelectorAll(".all-sections"); // All sections to reveal
+
+  startBtn.addEventListener("click", () => {
+    startBtn.style.display = "none";  // Hide start button
+
+    // Reveal sections one by one with staggered animation
+    sections.forEach((sec, idx) => {
+      setTimeout(() => {
+        sec.style.display = "block";          // Show section
+        sec.querySelectorAll(".section-title, .project-card").forEach(el => el.classList.add("visible"));
+      }, idx * 400); // 400ms between sections
+    });
+
+    // Scroll to profile smoothly
+    document.querySelector("#profile").scrollIntoView({ behavior: "smooth" });
   });
 
-  // ===== Animate project cards =====
-  const cardObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add("visible"), index * 150);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
-  );
-
-  document.querySelectorAll(".project-card").forEach(card => {
-    cardObserver.observe(card);
-  });
-
-  // ===== Animate section titles =====
-  const titleObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-  document.querySelectorAll(".section-title").forEach(title => {
-    titleObserver.observe(title);
-  });
-
-  // ===== Smooth page transitions for HTML links =====
-  document.querySelectorAll("a[href$='.html']").forEach(link => {
+  // ===== SMOOTH SCROLL FOR NAVIGATION =====
+  document.querySelectorAll("a[href^='#']").forEach(link => {
     link.addEventListener("click", e => {
-      const url = link.getAttribute("href");
-      if (!url.startsWith("#")) {
-        e.preventDefault();
-        document.body.classList.remove("loaded");
-        setTimeout(() => {
-          window.location.href = url;
-        }, 300);
-      }
-    });
-  });
-
-  // ===== Smooth scrolling for anchor links =====
-  document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener("click", e => {
       e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
+      const target = document.querySelector(link.getAttribute("href"));
+      if(target) target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+
+  // ===== PROFILE PHOTO PARALLAX =====
+  const profileImg = document.querySelector(".profile-photo");
+  window.addEventListener("mousemove", e => {
+    if(!profileImg) return;
+    const x = (window.innerWidth/2 - e.clientX)/30;
+    const y = (window.innerHeight/2 - e.clientY)/30;
+    profileImg.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  // ===== SCROLL ANIMATION FOR REMAINING SECTIONS =====
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add("visible"), index * 120);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(".section-title, .project-card").forEach(el => observer.observe(el));
 });
-
-
