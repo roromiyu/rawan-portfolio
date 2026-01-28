@@ -4,18 +4,25 @@
   <meta charset="UTF-8">
   <title>Rawan Ahmad | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/main.js"></script>
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
+<!-- STAR BACKGROUND -->
+<div id="stars"></div>
+
+<!-- NAVBAR -->
 <nav>
   <ul class="nav-menu">
     <li><a href="#profile">Profile</a></li>
     <li><a href="#summary">Summary</a></li>
     <li><a href="#education">Education</a></li>
-    <li><a href="#competitions">Competitions</a></li>
+    <li><a href="#competitions">Experience</a></li>
     <li><a href="#certifications">Certifications</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#languages">Languages</a></li>
@@ -23,173 +30,205 @@
   </ul>
 </nav>
 
-<!-- ===== PROFILE SECTION ===== -->
+<!-- PROFILE -->
 <section id="profile">
-  </h2 class="section-title">Rawan's Portfolio</h2>
-  <img src="assets/images/profile.jpg" alt="Rawan Ahmad profile photo" class="profile-photo">
+  <h1 class="hero-title">Rawan Ahmad</h1>
 
+  <img src="assets/images/profile.jpg" class="profile-photo">
 
-  <!-- Start Button -->
-  <button id="start-btn" class="btn primary">Start</button>
+  <button id="start-btn" class="btn primary">Enter Portfolio</button>
 
-  <div class="projects-grid all-sections" style="display:none;">
+  <div class="projects-grid all-sections hidden">
     <div class="project-card">
-      📍 Kuwait | 📞 +965 66690179 | 📧 rawanamohammed59@gmail.com<br>
-      🔗 <a href="https://www.linkedin.com/in/rawanmohammad1" target="_blank">LinkedIn</a>
+      <div class="card-main-title">Contact Information</div>
+      <div class="card-text">
+        📍 Kuwait <br>
+        📞 +965 66690179 <br>
+        📧 <a href="mailto:rawanamohammed59@gmail.com" class="contact-link">rawanamohammed59@gmail.com</a><br><br>
+        🔗 <a href="https://www.linkedin.com/in/rawanmohammad1" target="_blank" class="contact-link">LinkedIn Profile</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SUMMARY SECTION ===== -->
-<section id="summary" class="all-sections" style="display:none;">
-  <h2 class="section-title">[ SUMMARY ]</h2>
+<!-- SUMMARY -->
+<section id="summary" class="all-sections hidden">
+  <h2 class="section-title">SUMMARY</h2>
   <div class="projects-grid">
     <div class="project-card">
-      MIS graduate from the American University of the Middle East (AUM) with experience in website development, database management, and system simulation.  
-      Developed an AI Healthcare Chatbot website for the Capstone Project and a bank process simulation model using Arena Software.  
-      Passionate about technology-driven solutions that enhance efficiency and innovation.
+      <div class="card-text">
+        MIS graduate from American University of the Middle East (AUM) with experience in website development, system simulation, and database management. Developed AI Healthcare Chatbot and bank process simulation models. Passionate about innovation and technology-driven solutions.
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== EDUCATION SECTION ===== -->
-<section id="education">
-  <h2 class="section-title">[ EDUCATION ]</h2>
+<!-- EDUCATION -->
+<section id="education" class="all-sections hidden">
+  <h2 class="section-title">EDUCATION</h2>
   <div class="projects-grid">
     <div class="project-card">
-     Bachelor of Science in Management Information Systems
-American University of the Middle East (AUM), 2021 – 2025
+      <div class="card-text">
+        Bachelor of Science in Management Information Systems<br>
+        American University of the Middle East (AUM)<br>
+        2021 – 2025
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== COMPETITIONS & ACHIEVEMENTS ===== -->
-<section id="competitions">
-  <h2 class="section-title">[ COMPETITIONS & ACHIEVEMENTS ]</h2>
+<!-- EXPERIENCE / COMPETITIONS -->
+<section id="competitions" class="all-sections hidden">
+  <h2 class="section-title">COMPETITIONS & EXPERIENCE</h2>
+
   <div class="projects-grid">
+
     <div class="project-card">
-      🥇 First Place – Sustainability Innovation Competition (AI Healthcare Chatbot)<br>
-      🥈 Second Place – AUM Capstone Project Competition (AI Healthcare Chatbot)<br>
-      🏆 First Place – Business Intelligence Simulation Project<br>
-      3× Winner – AUM Innovation Fair<br>
-      Represented AUM in URIC 2025 Research Competition (Abu Dhabi)
+      <div class="card-main-title">Major Achievements</div>
+      <div class="card-text">
+        🥇 Sustainability Innovation Competition (AI Healthcare Chatbot)<br>
+        🥈 Capstone Project Competition<br>
+        🏆 Business Intelligence Simulation Project<br>
+        3× Winner – AUM Innovation Fair
+      </div>
     </div>
 
     <div class="project-card">
-      Participated in Online Hackathon – Computer Science Girlies (July – Nov 2025, Remote)<br>
-      Competed in two categories:<br><br>
-      <strong>AI vs HI Hackathon – TimeCapsuleYou</strong><br>
-      Built a digital time capsule platform using HTML, CSS, JS, Python, and SQLite.<br><br>
-      <strong>CS Girlies November Hackathon – MochiMind</strong><br>
-      Developed a gamified learning app with AI virtual companion.<br>
-      *(Still in development)*
+      <div class="card-main-title">Research Competition</div>
+      <div class="card-text">
+        URIC 2025 Research Competition (Abu Dhabi)
+      </div>
     </div>
 
     <div class="project-card">
-      🏅 5th Place – Hoot Academy Hackathon<br>
-      Internship – Communication and Information Technology Regulatory Authority (CITRA)
-    </div>
-  </div>
-</section>
+      <div class="card-main-title">Hackathon Projects</div>
+      <div class="card-text">
+        <span class="card-sub-title">TimeCapsuleYou</span><br>
+        Digital platform using HTML, CSS, JS, Python, SQLite<br><br>
 
-<!-- ===== CERTIFICATIONS & WORKSHOPS ===== -->
-<section id="certifications">
-  <h2 class="section-title">[ CERTIFICATIONS & WORKSHOPS ]</h2>
-  <div class="projects-grid">
-    
-    <!-- AUM Certifications -->
-    <div class="project-card">
-      <strong class="cert-amu">American University of the Middle East (AUM)</strong>
-      <p>Young Entrepreneurship Workshop (Marketing) – 2023</p>
-      <p>Fundamentals of Digital Marketing by Google – 2024</p>
-      <p>Logo Design for Mobile Apps & Social Media – 2024</p>
-      <p>MIS Club Member – 2024</p>
-      <p>The Science of Seeing Beyond: Telescope in Action – 2025</p>
-      <p>Advocate AI Club – 2025</p>
+        <span class="card-sub-title">MochiMind <span class="in-progress">In Progress</span></span><br>
+        Gamified AI Learning App — still in development
+      </div>
     </div>
 
-    <!-- CPES Certifications -->
     <div class="project-card">
-      <strong class="cert-cpes">CPES</strong>
-      <p>Python & Machine Learning – 2024</p>
-      <p>UI/UX Design – 2024</p>
-      <p>Website Development – 2025</p>
+      <div class="card-main-title">Professional Experience</div>
+      <div class="card-text">
+        Internship — Communication and Information Technology Regulatory Authority (CITRA)
+      </div>
     </div>
 
-    <!-- Hoot Academy Certifications -->
     <div class="project-card">
-      <strong class="cert-hoot">Hoot Academy</strong>
-      <p>Cybersecurity Track – 2025</p>
+      <div class="card-main-title">Hood Academy Workshops</div>
+      <div class="card-text">
+        🏅 5th Place — Hood Academy Hackathon<br>
+        Cybersecurity Track — 2025
+      </div>
     </div>
 
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="all-sections hidden">
+  <h2 class="section-title">CERTIFICATIONS & WORKSHOPS</h2>
 
-<!-- ===== SKILLS ===== -->
-<section id="skills">
-  <h2 class="section-title">[ SKILLS ]</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="card-main-title">American University of the Middle East (AUM)</div>
+      <div class="card-text">
+        Young Entrepreneurship Workshop (MKT), 2023<br>
+        Fundamentals of Digital Marketing by Google (MKT), 2024<br>
+        Logo Design for Mobile Apps & Social Media (MKT), 2024<br>
+        MIS Club Member, 2024<br>
+        The Science of Seeing Beyond: Telescope in Action, 2025<br>
+        Advocate AI (MKT) Club, 2025
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-main-title">CPES</div>
+      <div class="card-text">
+        Python & Machine Learning, 2024<br>
+        UI/UX Design, 2024<br>
+        Website Development, 2025
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-main-title">Hood Academy</div>
+      <div class="card-text">
+        Cybersecurity Track, 2025
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="all-sections hidden">
+  <h2 class="section-title">SKILLS</h2>
   <div class="projects-grid">
     <div class="project-card">
-      <strong>Website Development</strong><br>
-      System Design & Simulation
+      <div class="card-text">
+        Website Development<br>
+        System Design & Simulation
+      </div>
     </div>
+
     <div class="project-card">
-      <strong>Leadership & Collaboration</strong><br>
-      Problem Solving & Critical Thinking<br>
-      Fast Learning & Public Speaking
+      <div class="card-text">
+        Leadership & Collaboration<br>
+        Problem Solving & Critical Thinking<br>
+        Fast Learning & Public Speaking
+      </div>
     </div>
+
     <div class="project-card">
-      <strong>Programming & Tools</strong><br>
-      Python (Basic)<br>
-      SQL (Basic)<br>
-      VBA (Excel Macros) (Basic)
+      <div class="card-text">
+        Python (Basic)<br>
+        SQL (Basic)<br>
+        VBA (Excel Macros) (Basic)
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== LANGUAGES ===== -->
-<section id="languages">
-  <h2 class="section-title">[ LANGUAGES ]</h2>
+<!-- LANGUAGES -->
+<section id="languages" class="all-sections hidden">
+  <h2 class="section-title">LANGUAGES</h2>
   <div class="projects-grid">
-    <div class="project-card">Arabic – Native</div>
-    <div class="project-card">English – Fluent</div>
-    <div class="project-card">Korean – Basic</div>
-    <div class="project-card">Spanish – Basic</div>
+    <div class="project-card"><span style="color:#00d4ff;">Arabic</span> — <span style="color:white;">Native</span></div>
+    <div class="project-card"><span style="color:#00d4ff;">English</span> — <span style="color:white;">Fluent</span></div>
+    <div class="project-card"><span style="color:#00d4ff;">Korean</span> — <span style="color:white;">Basic</span></div>
+    <div class="project-card"><span style="color:#00d4ff;">Spanish</span> — <span style="color:white;">Basic</span></div>
   </div>
 </section>
 
-<!-- ===== REFERENCES ===== -->
-<section id="references">
-  <h2 class="section-title">[ REFERENCES ]</h2>
+<!-- REFERENCES -->
+<section id="references" class="all-sections hidden">
+  <h2 class="section-title">REFERENCES</h2>
   <div class="projects-grid">
     <div class="project-card">
-      <p><strong>Prof. Yehia Alzoubi</strong></p>
-      <p>American University of the Middle East</p>
-      <p><a href="https://www.linkedin.com/in/yehia-alzoubi-5420845a" target="_blank">LinkedIn Profile</a></p>
+      <div class="card-text">
+        Prof. Yehia Alzoubi<br>
+        <a href="https://www.linkedin.com/in/yehia-alzoubi-5420845a" target="_blank">LinkedIn Profile</a>
+      </div>
     </div>
 
     <div class="project-card">
-      <p><strong>Prof. Blerim Limani</strong></p>
-      <p>American University of the Middle East</p>
-      <p><a href="https://www.linkedin.com/in/blerim-limani" target="_blank">LinkedIn Profile</a></p>
-    </div>
-
-    <!-- <div class="project-card">
-      <p><strong>Rawan Ahmad Portfolio</strong></p>
-      <p>My linkedin</p>
-      <p><a href="linkedin.com/in/rawanmohammad1" target="_blank">Visit Portfolio</a></p>
+      <div class="card-text">
+        Prof. Blerim Limani<br>
+        <a href="https://www.linkedin.com/in/blerim-limani" target="_blank">LinkedIn Profile</a>
+      </div>
     </div>
   </div>
-</section> -->
+</section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
-  <p>&copy; 2026 Rawan Ahmad. All Rights Reserved.</p>
+  © 2026 Rawan Ahmad — Cyber Portfolio
 </footer>
 
 </body>
 </html>
-
-
-
